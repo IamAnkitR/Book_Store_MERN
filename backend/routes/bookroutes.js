@@ -6,6 +6,7 @@ import { Book } from "../models/bookModel.js";
 router.get("/", async (req, res) => {
     try {
         const books = await Book.find({});
+        console.log("Books");
         res.status(200).json({
             "count": books.length,
             "books": books,
